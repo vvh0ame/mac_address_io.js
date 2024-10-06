@@ -1,10 +1,14 @@
-# mac_address_io.py
+# mac_address_io.js
 Web-API for [macaddress.io](https://macaddress.io) website to retrieve information about given mac address
 
 ## Example
-```python
-import mac_address_io
-mac_address_io = mac_address_io.MacAddressIO(api_key="", mac_address="")
-mac_address_details = mac_address_io.get_mac_address_details()
-print(mac_address_details)
+```JavaScript
+async function main() {
+	const { MacAddressIo } = require("./mac_address_io.js")
+	const macAddressIo = new MacAddressIo("apiKey", "macAddress")
+	const data = await macAddressIo.getData()
+	console.log(data)
+}
+
+main()
 ```
